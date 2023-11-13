@@ -1,35 +1,71 @@
-.grid-container {
+.portfolio .portfolio_bloc .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
   grid-auto-rows: minmax(min-content, max-content);
   grid-auto-flow: dense;
 }
 @media (max-width: 680px) {
-  .grid-container {
+  .portfolio .portfolio_bloc .grid-container {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (min-width: 681px) and (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  .portfolio .portfolio_bloc .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   }
 }
-.grid-container .grid-item {
+.portfolio .portfolio_bloc .grid-container .grid-item {
   width: 100%;
   height: 100%;
   max-width: 100%;
   border-radius: 3px;
   grid-column-end: span 1;
   object-fit: cover;
+  transition: all 0.3s ease-in-out;
 }
-.grid-container .large-item {
+.portfolio .portfolio_bloc .grid-container .grid-item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  border-radius: 20%;
+}
+.portfolio .portfolio_bloc .grid-container .large-item {
   width: 100%;
   height: 100%;
   max-width: 100%;
   border-radius: 3px;
   grid-column-end: span 2;
   object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio .portfolio_bloc .grid-container .large-item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  border-radius: 20%;
+}
+.portfolio .portfolio_bloc .overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(7px);
+}
+.portfolio .portfolio_bloc .overlay-container .overlay_item {
+  position: relative;
+  width: 85%;
+  height: 90%;
+}
+.portfolio .portfolio_bloc .overlay-container .overlay_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.portfolio .portfolio_bloc .overlay-container .overlay_item .cross_close_image {
+  position: absolute;
+  top: -2vw;
+  left: -5vw;
 }
 
 .test p {
