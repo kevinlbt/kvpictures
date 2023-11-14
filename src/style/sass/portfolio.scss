@@ -74,11 +74,21 @@
                 width: 85%;
                 height: 90%;
 
-                img {
+                div {
 
                     width: 100%;
                     height: 100%;
-                    object-fit: contain;         
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;      
+
+                    }
+
                 }
 
                 .cross_close_image {
@@ -87,11 +97,66 @@
                     top: -2vw;
                     left: -5vw;
                 }
-            }
 
+            }
         }
     }
 }
+
+/* next track */
+.fade-enter {
+    transform: translateX(-200em);
+    pointer-events: none;
+}
+.fade-enter-active {
+    transform: translateX(0);
+    transition: all .4s ease-in-out;
+}
+.fade-enter-done {
+    transform: translateX(0);
+}
+
+.fade-exit {
+    transform: translateX(0);
+    pointer-events: none;
+}
+.fade-exit-active {
+    transform: translateX(200em);
+    transition: all .4s ease-in-out;
+}
+.fade-exit-done {
+    transform: translateX(200em);
+    
+}
+
+
+
+/* prev track */
+.fadeout-enter {
+    transform: translateX(200em);
+    pointer-events: none;
+}
+.fadeout-enter-active {
+    transform: translateX(0);
+    transition: all .4s ease-in-out;
+}
+.fadeout-enter-done {
+    transform: translateX(0);
+}
+
+
+.fadeout-exit {
+    transform: translateX(0);
+    pointer-events: none;
+}
+.fadeout-exit-active {
+    transform: translateX(-200em);
+    transition: all .4s ease-in-out;
+}
+.fadeout-exit-done {
+    transform: translateX(-200em); 
+}
+
 
 
 
