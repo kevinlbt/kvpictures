@@ -1,10 +1,16 @@
+import React from "react";
 
 function Home() {
+
   return (
-    <div className="test">
-      <p className="text-7xl text-red-500 m-24">hello there home page</p>
-      <a className="m-4 border-2 p-12 text-3xl text-orange-500" href="/portfolio">Portfolio</a>
-    </div>
+    <section className="home flex justify-center items-center">
+        <div className="home_basic">
+            <div>
+                <h1><strong className='fonth1'>KV</strong><strong className='fonth1bis'>Pictures</strong></h1>
+                <p>Photographer</p>
+            </div>
+        </div>
+    </section>
   );
 }
 

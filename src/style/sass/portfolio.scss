@@ -1,5 +1,4 @@
 
-
 .portfolio {
 
     h1 {
@@ -56,6 +55,7 @@
                 font-family: $texte;
                 color: $text-color;
                 font-size: 1.1em;
+
             }
 
             .selected_projet::before {
@@ -68,6 +68,18 @@
             .not_selected {
 
                 transform: translateX(37px);
+
+                &:hover::before {
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 900; 
+                    content: "\f178";
+                    margin: 10px;
+                }
+
+                &:hover {
+
+                    transform: translateX(0px);
+                }
             }
         }
 
@@ -101,8 +113,8 @@
                 &:hover {
         
                     cursor: pointer;
-                    transform: scale(1.05);
-                    border-radius:20%;
+                    transform: scale(1.07);
+                    border-radius: 10%;
                 }
             
             }
@@ -121,7 +133,7 @@
         
                     cursor: pointer;
                     transform: scale(1.05);
-                    border-radius:20%;
+                    border-radius:10%;
                 }
             }
         }
