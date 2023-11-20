@@ -2,7 +2,48 @@
 
 .portfolio {
 
+    h1 {
+
+        margin: -3em 0 -5em 0;
+
+        .fonth1{
+
+            font-family: $title;
+            font-size: 12em;
+            font-weight: lighter;
+            margin-left: 0.2em;
+        }
+
+        .fonth1bis {
+
+            font-family: $texte;
+            font-size: 5em;
+            font-weight: lighter;
+            padding-left: 0.5em;
+            
+        }
+
+    }
+
+    .navbar {
+
+        margin-top: 3em;
+        margin-right: 2em;
+
+        li {
+
+            font-family: $title;
+            font-size: 2em;
+            padding: 0.5em;
+        }
+    }
+
     .portfolio_bloc {
+
+        h2 {
+
+            font-family: $texte;
+        }
 
         .grid-container {
             display: grid;
@@ -98,33 +139,38 @@
                     left: -5vw;
                 }
 
+                .index_pages {
+
+                    position: absolute;
+                    top: 7vh;
+                    left: -4.2vw;
+                }
+
             }
         }
     }
 }
 
 /* next track */
-.fade-enter {
-    transform: translateX(-200em);
-    pointer-events: none;
-}
+
 .fade-enter-active {
-    transform: translateX(0);
-    transition: all .4s ease-in-out;
+
+    transform: translateX(-200em);
+    
 }
 .fade-enter-done {
+
+    transition: all .3s ease-in-out;
     transform: translateX(0);
 }
 
-.fade-exit {
-    transform: translateX(0);
-    pointer-events: none;
-}
 .fade-exit-active {
-    transform: translateX(200em);
-    transition: all .4s ease-in-out;
+
+    transform: translateX(150em);
+    transition: all .3s ease-in-out;
 }
 .fade-exit-done {
+
     transform: translateX(200em);
     
 }
@@ -132,28 +178,29 @@
 
 
 /* prev track */
-.fadeout-enter {
-    transform: translateX(200em);
-    pointer-events: none;
-}
+
 .fadeout-enter-active {
-    transform: translateX(0);
-    transition: all .4s ease-in-out;
+
+    transform: translateX(200em);   
 }
 .fadeout-enter-done {
+   
+    transition: all .3s ease-in-out; 
     transform: translateX(0);
 }
-
 
 .fadeout-exit {
-    transform: translateX(0);
-    pointer-events: none;
+
+    transform: translateX(-30em);
 }
+
 .fadeout-exit-active {
-    transform: translateX(-200em);
-    transition: all .4s ease-in-out;
+
+    transform: translateX(-150em);
+    transition: all .3s ease-out;
 }
 .fadeout-exit-done {
+
     transform: translateX(-200em); 
 }
 

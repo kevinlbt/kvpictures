@@ -1,4 +1,11 @@
+@import "variables.scss";
 @import "portfolio.scss";
+
+body {
+
+    background-color: $backcolor;
+
+}
 
 .test {
 

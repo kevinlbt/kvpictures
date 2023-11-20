@@ -43,7 +43,7 @@ export default function Portfolio () {
                     Authorization: `Bearer ${token}`,
                 },
             });
-            setApiPhoto(data.data[0].attributes.photos.data)
+            setApiPhoto(data.data[1].attributes.photos.data)
         })();
     }, [ setApiPhoto])
 
@@ -79,10 +79,17 @@ export default function Portfolio () {
     }
 
     return <div className={`portfolio`}>
-        <h1 className="text-5xl m-6">kv pictures</h1>
+        <div className='flex justify-between items-center'>
+            <h1 className=""><strong className='fonth1'>KV</strong><strong className='fonth1bis'>Pictures</strong></h1>
+            <ul className='navbar flex justify-center items-center'>
+                <li>portfolio</li>
+                <li>about</li>
+                <li>contact</li>
+            </ul>
+        </div>
         <div className="portfolio_bloc flex">
             <div className="m-12 w-1/3">
-                <h2 className="text-4xl p-5">Project</h2>
+                <h2 className="text-4xl p-5">Projects</h2>
                 <ul className="p-5">
                     <li>text text</li>
                     <li>text text</li>
@@ -102,6 +109,7 @@ export default function Portfolio () {
                 
                 <div className="overlay-container flex justify-center items-center">
                         <div ref={wrapperRef} className={`overlay_item flex justify-center items-center`}>
+                            <p className='index_pages text-2xl text-white'> {apiPhoto.indexOf(selectedPhoto)+1} / {apiPhoto.length} </p>
                             <i onClick={() => setSelectedPhoto(null)} className="cross_close_image fa-regular fa-circle-xmark text-4xl text-slate-300 cursor-pointer hover:text-slate-500 p-8"></i>
                             <i onClick={() => PrevPhoto(selectedPhoto.id-1)} className="fa-regular fa-circle-left text-5xl text-slate-300 cursor-pointer hover:text-slate-500 p-8"></i>
                             <TransitionGroup
@@ -111,15 +119,13 @@ export default function Portfolio () {
                                     in={selectedPhoto !== null}
                                     appear={true}
                                     key={selectedPhoto.id}
-                                    timeout={400}
+                                    timeout={300}
                                     classNames={transitionName === "fade" ? "fade" : "fadeout"}
                                     unmountOnExit
                                 >   
                                     <img src={`https://my-strapi.kevinlebot.com${selectedPhoto.attributes.formats.large.url}`} alt={selectedPhoto.title} />                   
                                 </CSSTransition>
                             </TransitionGroup>
-                            
-
                             <i onClick={() => NextPhoto(selectedPhoto.id+1)} className="fa-regular fa-circle-right text-5xl text-slate-300 cursor-pointer hover:text-slate-500 p-8"></i>
                         </div>
                 </div>
