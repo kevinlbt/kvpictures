@@ -7,12 +7,14 @@
   font-size: 12em;
   font-weight: lighter;
   margin-left: 0.2em;
+  color: #2F2F2F;
 }
 .portfolio h1 .fonth1bis {
   font-family: "Lora", serif;
   font-size: 5em;
   font-weight: lighter;
   padding-left: 0.5em;
+  color: #2F2F2F;
 }
 .portfolio .navbar {
   margin-top: 3em;
@@ -21,10 +23,26 @@
 .portfolio .navbar li {
   font-family: "Hurricane", cursive;
   font-size: 2em;
-  padding: 0.5em;
+  padding: 1em;
+  color: #2F2F2F;
 }
 .portfolio .portfolio_bloc h2 {
   font-family: "Lora", serif;
+  color: #2F2F2F;
+}
+.portfolio .portfolio_bloc ul li {
+  font-family: "Lora", serif;
+  color: #2F2F2F;
+  font-size: 1.1em;
+}
+.portfolio .portfolio_bloc ul .selected_projet::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f178";
+  margin: 10px;
+}
+.portfolio .portfolio_bloc ul .not_selected {
+  transform: translateX(37px);
 }
 .portfolio .portfolio_bloc .grid-container {
   display: grid;

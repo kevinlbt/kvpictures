@@ -12,6 +12,7 @@
             font-size: 12em;
             font-weight: lighter;
             margin-left: 0.2em;
+            color: $text-color;
         }
 
         .fonth1bis {
@@ -20,6 +21,7 @@
             font-size: 5em;
             font-weight: lighter;
             padding-left: 0.5em;
+            color: $text-color;
             
         }
 
@@ -34,7 +36,8 @@
 
             font-family: $title;
             font-size: 2em;
-            padding: 0.5em;
+            padding: 1em;
+            color: $text-color;
         }
     }
 
@@ -43,6 +46,29 @@
         h2 {
 
             font-family: $texte;
+            color: $text-color;
+        }
+
+        ul {
+
+            li {
+
+                font-family: $texte;
+                color: $text-color;
+                font-size: 1.1em;
+            }
+
+            .selected_projet::before {
+
+                font-family: "Font Awesome 5 Free"; 
+                font-weight: 900; 
+                content: "\f178";
+                margin: 10px;
+            }
+            .not_selected {
+
+                transform: translateX(37px);
+            }
         }
 
         .grid-container {
