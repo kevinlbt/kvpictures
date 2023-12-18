@@ -109,7 +109,7 @@ export default function Portfolio () {
                         )): null}
                     </ul>
                 </div>
-                <div className='w-2/3 mr-12 mt-32'>
+                <div className='w-2/3 mr-12 mt-32 mb-12'>
                     {projectPhotoSelected ? <div className="grid-container">
                         {projectPhotoSelected.attributes.photos.data.map(photo => (
                             <img onClick={() => setSelectedPhoto(photo)} key={photo.id} src={`https://my-strapi.kevinlebot.com${photo.attributes.formats.medium.url}`} alt={photo.title} className={photo.attributes.height > photo.attributes.width ? "grid-item" : "large-item"} />

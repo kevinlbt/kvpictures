@@ -79,27 +79,262 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
   height: 80vh;
   width: 83vw;
 }
-.home .home_basic h1 {
+.home .home_basic div h1 {
   margin: -3em 0 -5em 0;
 }
-.home .home_basic h1 .fonth1 {
+.home .home_basic div h1 .fonth1 {
   font-family: "Hurricane", cursive;
   font-size: 12em;
   font-weight: lighter;
   margin-left: 0.2em;
   color: #2F2F2F;
 }
-.home .home_basic h1 .fonth1bis {
+.home .home_basic div h1 .fonth1bis {
   font-family: "Lora", serif;
   font-size: 5em;
   font-weight: lighter;
   padding-left: 0.5em;
   color: #2F2F2F;
 }
-.home .home_basic p {
+.home .home_basic div p {
   font-family: "Lora", serif;
   font-size: 1.6em;
   padding: 1em 2em;
+}
+.home .home_basic div .group {
+  position: relative;
+  transform: translateX(30vw) translateY(-2vw);
+}
+.home .home_basic div .group .overlap-group {
+  height: 166px;
+  left: 154px;
+  position: absolute;
+  top: 154px;
+  width: 166px;
+}
+.home .home_basic div .group .ellipse,
+.home .home_basic div .group .ellipse-1,
+.home .home_basic div .group .ellipse-2,
+.home .home_basic div .group .ellipse-3,
+.home .home_basic div .group .ellipse-4,
+.home .home_basic div .group .ellipse-5,
+.home .home_basic div .group .ellipse-6,
+.home .home_basic div .group .ellipse-7,
+.home .home_basic div .group .ellipse-8,
+.home .home_basic div .group .ellipse-9,
+.home .home_basic div .group .ellipse-10,
+.home .home_basic div .group .ellipse-11,
+.home .home_basic div .group .ellipse-12,
+.home .home_basic div .group .ellipse-13,
+.home .home_basic div .group .ellipse-14,
+.home .home_basic div .group .ellipse-15,
+.home .home_basic div .group .ellipse-16,
+.home .home_basic div .group .ellipse-17,
+.home .home_basic div .group .ellipse-18,
+.home .home_basic div .group .ellipse-19,
+.home .home_basic div .group .ellipse-20,
+.home .home_basic div .group .ellipse-21,
+.home .home_basic div .group .ellipse-22,
+.home .home_basic div .group .ellipse-23,
+.home .home_basic div .group .ellipse-24 {
+  background-color: #000000;
+  border-radius: 2px;
+  height: 4px;
+  position: absolute;
+  width: 4px;
+}
+.home .home_basic div .group .ellipse {
+  left: 2px;
+  top: 2px;
+}
+.home .home_basic div .group .ellipse-1 {
+  left: 2px;
+  top: 80px;
+}
+.home .home_basic div .group .ellipse-2 {
+  left: 2px;
+  top: 160px;
+}
+.home .home_basic div .group .ellipse-3 {
+  left: 80px;
+  top: 80px;
+}
+.home .home_basic div .group .ellipse-4 {
+  left: 80px;
+  top: 160px;
+}
+.home .home_basic div .group .ellipse-5 {
+  left: 160px;
+  top: 160px;
+}
+.home .home_basic div .group .ellipse-6 {
+  left: 80px;
+  top: 2px;
+}
+.home .home_basic div .group .ellipse-7 {
+  left: 160px;
+  top: 2px;
+}
+.home .home_basic div .group .ellipse-8 {
+  left: 160px;
+  top: 80px;
+}
+.home .home_basic div .group .ellipse-9 {
+  left: 78px;
+  top: 156px;
+}
+.home .home_basic div .group .ellipse-10 {
+  left: 78px;
+  top: 234px;
+}
+.home .home_basic div .group .ellipse-11 {
+  left: 0;
+  top: 234px;
+}
+.home .home_basic div .group .ellipse-12 {
+  left: 156px;
+  top: 390px;
+}
+.home .home_basic div .group .ellipse-13 {
+  left: 78px;
+  top: 314px;
+}
+.home .home_basic div .group .ellipse-14 {
+  left: 236px;
+  top: 390px;
+}
+.home .home_basic div .group .ellipse-15 {
+  left: 236px;
+  top: 468px;
+}
+.home .home_basic div .group .ellipse-16 {
+  left: 392px;
+  top: 314px;
+}
+.home .home_basic div .group .ellipse-17 {
+  left: 314px;
+  top: 390px;
+}
+.home .home_basic div .group .ellipse-18 {
+  left: 232px;
+  top: 78px;
+}
+.home .home_basic div .group .ellipse-19 {
+  left: 228px;
+  top: 0;
+}
+.home .home_basic div .group .ellipse-20 {
+  left: 314px;
+  top: 78px;
+}
+.home .home_basic div .group .ellipse-21 {
+  left: 156px;
+  top: 78px;
+}
+.home .home_basic div .group .ellipse-22 {
+  left: 392px;
+  top: 156px;
+}
+.home .home_basic div .group .ellipse-23 {
+  left: 392px;
+  top: 236px;
+}
+.home .home_basic div .group .ellipse-24 {
+  left: 470px;
+  top: 236px;
+}
+.home .home_basic div .group .rectangle {
+  border: 1px solid;
+  border-color: #000000;
+  height: 166px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 166px;
+}
+.home .home_basic div .navbis {
+  margin-top: 3em;
+  margin-right: 2em;
+  margin-bottom: 4em;
+}
+.home .home_basic div .navbis li {
+  font-family: "Hurricane", cursive;
+  font-size: 2.3em;
+  padding: 0 0.5em;
+  margin: 0 0.5em;
+  color: #2F2F2F;
+  display: block;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-align: center;
+  cursor: pointer;
+}
+.home .home_basic div .navbis li:after, .home .home_basic div .navbis li:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0px solid transparent;
+  width: 0%;
+  height: 0%;
+  transition: all 0.3s ease;
+}
+.home .home_basic div .navbis li:after {
+  width: 0%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+.home .home_basic div .navbis li:before {
+  width: 0%;
+  height: 0%;
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+.home .home_basic div .navbis li:hover::before, .home .home_basic div .navbis li:hover::after {
+  width: 20px;
+  height: 20px;
+  border-color: #000000;
+}
+.home .home_basic div .me {
+  width: 15vw;
+  margin-top: 2em;
+  border-radius: 5px;
+}
+.home .home_basic div blockquote {
+  font-family: "Lora", serif;
+  font-size: 1.1em;
+  width: 12vw;
+}
+
+.about h2 {
+  font-family: "Lora", serif;
+  font-size: 7em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.about h2 .fonth2 {
+  font-family: "Hurricane", cursive;
+  font-size: 3em;
+  font-weight: lighter;
+  color: #2F2F2F;
+}
+.about .arrow-about p::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f178";
+  margin: 10px;
+}
+.about .arrow-about p {
+  font-family: "Lora", serif;
+  font-size: 1.5em;
 }
 
 .portfolio h1 {

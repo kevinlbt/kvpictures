@@ -12,34 +12,240 @@
         height: 80vh;
         width: 83vw;
 
-        h1 {
+        div {
 
-            margin: -3em 0 -5em 0;
-    
-            .fonth1{
-    
-                font-family: $title;
-                font-size: 12em;
-                font-weight: lighter;
-                margin-left: 0.2em;
-                color: $text-color;
+            h1 {
+
+                margin: -3em 0 -5em 0;
+        
+                .fonth1{
+        
+                    font-family: $title;
+                    font-size: 12em;
+                    font-weight: lighter;
+                    margin-left: 0.2em;
+                    color: $text-color;
+                }
+        
+                .fonth1bis {
+        
+                    font-family: $texte;
+                    font-size: 5em;
+                    font-weight: lighter;
+                    padding-left: 0.5em;
+                    color: $text-color;
+                    
+                }
             }
     
-            .fonth1bis {
-    
+            p {
                 font-family: $texte;
-                font-size: 5em;
-                font-weight: lighter;
-                padding-left: 0.5em;
-                color: $text-color;
-                
+                font-size: 1.6em;
+                padding: 1em 2em
             }
+
+            .group {
+                position: relative;
+                transform: translateX(30vw) translateY(-2vw);
+              
+                $factor: 3; // Facteur d'agrandissement
+
+                @media (max-width:1024px) {
+    
+                    $factor: 2;
+                }
+
+                .overlap-group {
+                  height: 83px * $factor;
+                  left: 77px * $factor;
+                  position: absolute;
+                  top: 77px * $factor;
+                  width: 83px * $factor;
+                }
+              
+                .ellipse,
+                .ellipse-1,
+                .ellipse-2,
+                .ellipse-3,
+                .ellipse-4,
+                .ellipse-5,
+                .ellipse-6,
+                .ellipse-7,
+                .ellipse-8,
+                .ellipse-9,
+                .ellipse-10,
+                .ellipse-11,
+                .ellipse-12,
+                .ellipse-13,
+                .ellipse-14,
+                .ellipse-15,
+                .ellipse-16,
+                .ellipse-17,
+                .ellipse-18,
+                .ellipse-19,
+                .ellipse-20,
+                .ellipse-21,
+                .ellipse-22,
+                .ellipse-23,
+                .ellipse-24 {
+                  background-color: #000000;
+                  border-radius: 2px;
+                  height: 2px * $factor;
+                  position: absolute;
+                  width: 2px * $factor;
+                }
+              
+                .ellipse { left: 1px * $factor; top: 1px * $factor; }
+                .ellipse-1 { left: 1px * $factor; top: 40px * $factor; }
+                .ellipse-2 { left: 1px * $factor; top: 80px * $factor; }
+                .ellipse-3 { left: 40px * $factor; top: 40px * $factor; }
+                .ellipse-4 { left: 40px * $factor; top: 80px * $factor; }
+                .ellipse-5 { left: 80px * $factor; top: 80px * $factor; }
+                .ellipse-6 { left: 40px * $factor; top: 1px * $factor; }
+                .ellipse-7 { left: 80px * $factor; top: 1px * $factor; }
+                .ellipse-8 { left: 80px * $factor; top: 40px * $factor; }
+                .ellipse-9 { left: 39px * $factor; top: 78px * $factor; }
+                .ellipse-10 { left: 39px * $factor; top: 117px * $factor; }
+                .ellipse-11 { left: 0; top: 117px * $factor; }
+                .ellipse-12 { left: 78px * $factor; top: 195px * $factor; }
+                .ellipse-13 { left: 39px * $factor; top: 157px * $factor; }
+                .ellipse-14 { left: 118px * $factor; top: 195px * $factor; }
+                .ellipse-15 { left: 118px * $factor; top: 234px * $factor; }
+                .ellipse-16 { left: 196px * $factor; top: 157px * $factor; }
+                .ellipse-17 { left: 157px * $factor; top: 195px * $factor; }
+                .ellipse-18 { left: 116px * $factor; top: 39px * $factor; }
+                .ellipse-19 { left: 114px * $factor; top: 0; }
+                .ellipse-20 { left: 157px * $factor; top: 39px * $factor; }
+                .ellipse-21 { left: 78px * $factor; top: 39px * $factor; }
+                .ellipse-22 { left: 196px * $factor; top: 78px * $factor; }
+                .ellipse-23 { left: 196px * $factor; top: 118px * $factor; }
+                .ellipse-24 { left: 235px * $factor; top: 118px * $factor; }
+              
+                .rectangle {
+                  border: 1px solid;
+                  border-color: #000000;
+                  height: 83px * $factor;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 83px * $factor;
+                }
+              }
+        }
+
+
+        div {
+
+            .navbis {
+
+                margin-top: 3em;
+                margin-right: 2em;
+                margin-bottom: 4em;
+        
+                li {
+        
+                    font-family: $title;
+                    font-size: 2.3em;
+                    padding: 0 0.5em;
+                    margin: 0 0.5em;
+                    color: $text-color;
+                    display: block;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                    text-align: center;
+                    cursor: pointer;
+        
+                    &:after,
+                    &:before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    border: 0px solid transparent;
+                    width: 0%;
+                    height: 0%;
+                    transition: all 0.3s ease;
+                    }
+        
+                    &:after {
+                    width: 0%;
+                    height: 0%;
+                    top: 0;
+                    left: 0;
+                    border-top: 2px solid transparent;
+                    border-left: 2px solid transparent;
+                    }
+        
+                    &:before {
+                    width: 0%;
+                    height: 0%;
+                    right: 0;
+                    bottom: 0;
+                    border-bottom: 2px solid transparent;
+                    border-right: 2px solid transparent;
+                    }
+        
+                    &:hover::before,
+                    &:hover::after {
+                    width: 20px;
+                    height: 20px;
+                    border-color: #000000;
+                    }
+                }
+            }
+
+            .me {
+
+                width: 15vw;
+                margin-top: 2em;
+                border-radius: 5px;
+            }
+
+            blockquote {
+
+                font-family: $texte;
+                font-size: 1.1em;
+                width: 12vw;
+            }
+        }
+    }
+}
+
+.about {
+
+    h2 {
+
+        font-family: $texte;
+        font-size: 7em;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        .fonth2{
+        
+            font-family: $title;
+            font-size: 3em;
+            font-weight: lighter;
+            color: $text-color;
+        }
+    }
+
+    .arrow-about {
+
+        p::before {
+
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f178";
+            margin: 10px;
         }
 
         p {
             font-family: $texte;
-            font-size: 1.6em;
-            padding: 1em 2em
+            font-size: 1.5em;
+
         }
     }
 }
