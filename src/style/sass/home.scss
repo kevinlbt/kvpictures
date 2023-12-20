@@ -46,7 +46,7 @@
 
             .group {
                 position: relative;
-                transform: translateX(30vw) translateY(-2vw);
+                transform: translateX(25vw) translateY(-2vw);
               
                 $factor: 3; // Facteur d'agrandissement
 
@@ -216,6 +216,12 @@
 
 .about {
 
+    img {
+
+        width: 23vw;
+        height: auto;
+    }
+
     h2 {
 
         font-family: $texte;
@@ -229,23 +235,56 @@
             font-size: 3em;
             font-weight: lighter;
             color: $text-color;
+            padding-right: 10px;
         }
     }
 
     .arrow-about {
 
-        p::before {
+        p::after {
 
             font-family: "Font Awesome 5 Free"; 
             font-weight: 900; 
             content: "\f178";
-            margin: 10px;
+            margin: 0 10px;
+            font-size: 1.2em;
         }
 
         p {
             font-family: $texte;
-            font-size: 1.5em;
+            font-size: 1em;
+            font-weight: 500;
 
+        }
+    }
+
+    .arrow-about-bis {
+
+        p::before {
+
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f177";
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+
+        p {
+            
+            font-family: $texte;
+            font-size: 1em;
+            font-weight: 500;
+
+        }
+    }
+
+    .description_about {
+
+        p {
+
+            font-family: $texte;
+            font-size: 1.2em;
+            font-weight: 500;
         }
     }
 }

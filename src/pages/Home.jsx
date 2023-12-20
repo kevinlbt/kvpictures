@@ -1,5 +1,6 @@
 import React from "react";
 import moi from "../assets/images/moi.jpg"
+import moi2 from "../assets/images/me2.jpg"
 
 function Home() {
 
@@ -58,9 +59,21 @@ function Home() {
                 <div className="arrow-about">
                     <p>about</p>
                 </div>
-                <div className="w-2/3">
-                    <p><strong>p</strong>assionate about photography, I use my free time to explore the world around me with my camera. I tried my hand at different types 
+                <div className="w-2/3 description_about">
+                    <p><strong className='fontp'>P</strong>assionate about photography, I use my free time to explore the world around me with my camera. I tried my hand at different types 
                     of photography such as landscape photography, street photography, portrait photography or wildlife photography.</p>
+                </div>
+            </div>
+            <div className="m-12 flex justify-between items-center">
+                <img src={moi2} alt="moi" />
+                <div className="h-2/3 flex justify-around items-center">
+                    <div className="w-2/6 description_about">
+                        <p><strong className='fontp'>P</strong>assionate about photography, I use my free time to explore the world around me with my camera. I tried my hand at different types 
+                        of photography such as landscape photography, street photography, portrait photography or wildlife photography.</p>
+                    </div>
+                    <div className="arrow-about-bis self-start">
+                        <p>about</p>
+                    </div>
                 </div>
             </div>
         </article>
