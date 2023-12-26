@@ -4,6 +4,7 @@ import './style/style.css';
 import './index.css';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
@@ -14,6 +15,7 @@ root.render(
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/portfolio' element={<Portfolio />} />
+            <Route path='/contact' element={<Contact />} />
         </Routes>
     </BrowserRouter>
   </React.StrictMode>

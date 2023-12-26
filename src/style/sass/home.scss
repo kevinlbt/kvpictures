@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
 
     .home_basic {
 
@@ -18,6 +18,11 @@
 
                 margin: -3em 0 -5em 0;
         
+                @media (max-width: 1425px) {
+
+                    margin: -2em 0 -3em 0;
+                }
+
                 .fonth1{
         
                     font-family: $title;
@@ -25,6 +30,11 @@
                     font-weight: lighter;
                     margin-left: 0.2em;
                     color: $text-color;
+
+                    @media (max-width: 1425px) {
+
+                        font-size: 9em;
+                    }
                 }
         
                 .fonth1bis {
@@ -35,23 +45,37 @@
                     padding-left: 0.5em;
                     color: $text-color;
                     
+                    @media (max-width: 1425px) {
+
+                        font-size: 4em;
+                    }
                 }
             }
     
             p {
                 font-family: $texte;
                 font-size: 1.6em;
-                padding: 1em 2em
+                padding: 1em 2em;
+
+                @media (max-width: 1425px) {
+
+                    padding: 0.5em 1.5em;
+                }
             }
 
-            @media (min-width: 1025px) {
+            @media (min-width: 1425px) {
 
-                @include draw (2)
+                @include draw (1.5, 25vw, 1vw)
+            }
+
+            @media (min-width: 1025px) and (max-width: 1424px) {
+
+                @include draw (1.25, 20vw, 4vw)
             }
 
             @media (max-width: 1024px) {
 
-                @include draw (1)
+                @include draw (1, 25vw, -2vw)
             }
         }
 
@@ -124,6 +148,11 @@
                 width: 15vw;
                 margin-top: 2em;
                 border-radius: 5px;
+
+                @media (max-width: 1425px) {
+
+                    width: 20vw;
+                }
             }
 
             blockquote {
@@ -142,6 +171,12 @@
 
         width: 23vw;
         height: auto;
+        z-index: 1;
+    }
+
+    @media (min-width: 1025px) {
+
+        @include draw (1, -30vw, -10vw)
     }
 
     h2 {

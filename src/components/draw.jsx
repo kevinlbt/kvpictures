@@ -1,9 +1,6 @@
 export default function Draw () {
 
-    return <div className="flex flex-col">
-                <h1><strong className='fonth1'>KV</strong><strong className='fonth1bis'>Pictures</strong></h1>
-                <p>Photographer</p>
-                <div className="group">
+    return      <div className="group">
                     <div className="overlap-group">
                         <div className="ellipse" />
                         <div className="ellipse-1" />
@@ -33,5 +30,4 @@ export default function Draw () {
                     <div className="ellipse-23" />
                     <div className="ellipse-24" />
                 </div>
-            </div>
 }

@@ -6,11 +6,11 @@ $title: 'Hurricane', cursive;
 $texte: 'Lora', serif;
 
 
-@mixin draw ($facteur) {
+@mixin draw ($facteur, $x, $y) {
 
     .group {
         position: relative;
-        transform: translateX(25vw) translateY(-2vw);
+        transform: translateX($x) translateY($y);
       
         $factor: $facteur; // Facteur d'agrandissement
 
