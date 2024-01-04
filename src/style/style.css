@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Hurricane&family=Lora:wght@400;500;700&display=swap");
 nav h1 {
   margin: -3em 0 -5em 0;
@@ -1028,10 +1029,53 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
 
 .contact h3 {
   font-family: "Lora", serif;
-  font-size: 2em;
+  font-size: 3em;
+}
+.contact h3 .contact_title {
+  font-family: "Hurricane", cursive;
+  font-size: 2.5em;
 }
 .contact .contact_form form input {
-  margin: 0.5em;
+  margin: 0.7em;
+  outline: none;
+}
+.contact .contact_form form textarea {
+  margin: 0.7em;
+  outline: none;
+}
+.contact .contact_form form button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #3d405b;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 16px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.contact .contact_form form button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.contact .contact_form form button span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+.contact .contact_form form button:hover span {
+  padding-right: 15px;
+}
+.contact .contact_form form button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 body {

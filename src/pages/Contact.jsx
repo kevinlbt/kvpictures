@@ -96,16 +96,18 @@ export default function Contact () {
     return <section className="contact" id="contact">
                 <NavBar />
 
-                <h3>Contacter - moi</h3>
+                <h3 className="ml-12"><strong className="contact_title pr-2">C</strong>ontacter - moi</h3>
 
                 <div className="contact_form">  
-                    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center formulaire w-2/4 lg:w-1/3 lg:pt-9 mx-auto m-12" >
-                        <input onChange={HandleNameChange} type="text" name="name" placeholder=" nom" className="w-full rounded-md py-1.5 focus:ring-4 focus:ring-yellow-500" />
-                        <input onChange={HandleFirstnameChange} type="text" name="firstname" placeholder=" prénom" className="w-full rounded-md py-1.5 focus:ring-4 focus:ring-yellow-500" />
-                        <input onChange={HandleEmailChange} type="email" name="email" placeholder=" Email" className="w-full rounded-md py-1.5 focus:ring-4 focus:ring-yellow-500" />
-                        <input onChange={HandleSubjectChange} type="text" name="subject" placeholder=" Sujet" className="w-full rounded-md py-1.5 focus:ring-4 focus:ring-yellow-500" />
-                        <textarea onChange={HandleMessageChange} name="message" rows="7" className="w-full rounded-md py-1.5 focus:ring-4 focus:ring-yellow-500"></textarea>
-                        <button type="submit" className="text-center my-6 rounded-md px-12 py-2 text-xl">Envoyer</button>
+                    <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center formulaire w-2/3 lg:w-2/5 lg:pt-8 mx-auto m-12" >
+                        <input onChange={HandleNameChange} type="text" name="name" placeholder=" nom" className="w-full rounded-md py-1.5 focus:ring-4 focus:ring-gray-500" />
+                        <input onChange={HandleFirstnameChange} type="text" name="firstname" placeholder=" prénom" className="w-full rounded-md py-1.5 focus:ring-4 focus:ring-gray-500" />
+                        <input onChange={HandleEmailChange} type="email" name="email" placeholder=" Email" className="w-full rounded-md py-1.5 focus:ring-4 focus:ring-gray-500" />
+                        <input onChange={HandleSubjectChange} type="text" name="subject" placeholder=" Sujet" className="w-full rounded-md py-1.5 focus:ring-4 focus:ring-gray-500" />
+                        <textarea onChange={HandleMessageChange} name="message" rows="7" className="w-full rounded-md py-1.5 focus:ring-4 focus:ring-gray-500"></textarea>
+                        <button className="m-8" type="submit">
+                            <span>Envoyer</span>
+                        </button>
                         {IfMailSend ? <p className={`text-3xl text-center h-9 ${ifError ? "text-red-500" : "text-green-500"}`}>{mailResponse}</p> : <p className="h-9"></p>}
                     </form>
                 </div>  
