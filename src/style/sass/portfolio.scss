@@ -1,0 +1,252 @@
+
+.portfolio {
+
+    h1 {
+
+        margin: -3em 0 -5em 0;
+
+        .fonth1{
+
+            font-family: $title;
+            font-size: 12em;
+            font-weight: lighter;
+            margin-left: 0.2em;
+            color: $text-color;
+        }
+
+        .fonth1bis {
+
+            font-family: $texte;
+            font-size: 5em;
+            font-weight: lighter;
+            padding-left: 0.5em;
+            color: $text-color;
+            
+        }
+
+    }
+
+    .navbar {
+
+        margin-top: 3em;
+        margin-right: 2em;
+
+        li {
+
+            font-family: $title;
+            font-size: 2em;
+            padding: 1em;
+            color: $text-color;
+        }
+    }
+
+    .portfolio_bloc {
+
+        h2 {
+
+            font-family: $texte;
+            color: $text-color;
+        }
+
+        ul {
+
+            li {
+
+                font-family: $texte;
+                color: $text-color;
+                font-size: 1.1em;
+
+            }
+
+            .selected_projet::before {
+
+                font-family: "Font Awesome 5 Free"; 
+                font-weight: 900; 
+                content: "\f178";
+                margin: 10px;
+            }
+            .not_selected {
+
+                transform: translateX(37px);
+
+                &:hover::before {
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 900; 
+                    content: "\f178";
+                    margin: 10px;
+                }
+
+                &:hover {
+
+                    transform: translateX(0px);
+                }
+            }
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 20px;
+            grid-auto-rows: minmax(min-content, max-content);
+            grid-auto-flow: dense;
+        
+            @media (max-width: 680px) {
+                
+                grid-template-columns: repeat(1, 1fr)
+            }
+        
+            @media (min-width: 681px) and (max-width: 1024px) {
+        
+                grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            }
+    
+            .grid-item {
+        
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                border-radius: 3px;
+                grid-column-end: span 1;
+                object-fit: cover;
+                transition: all 0.3s ease-in-out;
+        
+                &:hover {
+        
+                    cursor: pointer;
+                    transform: scale(1.07);
+                    border-radius: 10%;
+                }
+            
+            }
+        
+            .large-item {
+        
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                border-radius: 3px;
+                grid-column-end: span 2;
+                object-fit: cover;
+                transition: all 0.3s ease-in-out;
+        
+                &:hover {
+        
+                    cursor: pointer;
+                    transform: scale(1.05);
+                    border-radius:10%;
+                }
+            }
+        }
+    
+        .overlay-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 0, 0, 0.8);
+            backdrop-filter: blur(7px);
+    
+            .overlay_item {
+
+                position: relative;
+                width: 85%;
+                height: 90%;
+
+                div {
+
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;      
+
+                    }
+
+                }
+
+                .cross_close_image {
+
+                    position: absolute;
+                    top: -2vw;
+                    left: -5vw;
+                }
+
+                .index_pages {
+
+                    position: absolute;
+                    top: 7vh;
+                    left: -4.2vw;
+                }
+
+            }
+        }
+    }
+}
+
+/* next track */
+
+.fade-enter-active {
+
+    transform: translateX(-200em);
+    
+}
+.fade-enter-done {
+
+    transition: all .3s ease-in-out;
+    transform: translateX(0);
+}
+
+.fade-exit-active {
+
+    transform: translateX(150em);
+    transition: all .3s ease-in-out;
+}
+.fade-exit-done {
+
+    transform: translateX(200em);
+    
+}
+
+
+
+/* prev track */
+
+.fadeout-enter-active {
+
+    transform: translateX(200em);   
+}
+.fadeout-enter-done {
+   
+    transition: all .3s ease-in-out; 
+    transform: translateX(0);
+}
+
+.fadeout-exit {
+
+    transform: translateX(-30em);
+}
+
+.fadeout-exit-active {
+
+    transform: translateX(-150em);
+    transition: all .3s ease-out;
+}
+.fadeout-exit-done {
+
+    transform: translateX(-200em); 
+}
+
+
+
+
+
+
+
+  
+  

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Lora:wght@400;500;700&display=swap');
+
+$backcolor: #D9D9D9;
+$text-color: #2F2F2F;
+$title: 'Hurricane', cursive;
+$texte: 'Lora', serif;
+
+
+@mixin draw ($facteur, $x, $y) {
+
+    .group {
+        position: relative;
+        transform: translateX($x) translateY($y);
+      
+        $factor: $facteur; // Facteur d'agrandissement
+
+        .overlap-group {
+          height: 83px * $factor;
+          left: 77px * $factor;
+          position: absolute;
+          top: 77px * $factor;
+          width: 83px * $factor;
+        }
+      
+        .ellipse,
+        .ellipse-1,
+        .ellipse-2,
+        .ellipse-3,
+        .ellipse-4,
+        .ellipse-5,
+        .ellipse-6,
+        .ellipse-7,
+        .ellipse-8,
+        .ellipse-9,
+        .ellipse-10,
+        .ellipse-11,
+        .ellipse-12,
+        .ellipse-13,
+        .ellipse-14,
+        .ellipse-15,
+        .ellipse-16,
+        .ellipse-17,
+        .ellipse-18,
+        .ellipse-19,
+        .ellipse-20,
+        .ellipse-21,
+        .ellipse-22,
+        .ellipse-23,
+        .ellipse-24 {
+          background-color: #000000;
+          border-radius: 2px;
+          height: 2px * $factor;
+          position: absolute;
+          width: 2px * $factor;
+        }
+      
+        .ellipse { left: 1px * $factor; top: 1px * $factor; }
+        .ellipse-1 { left: 1px * $factor; top: 40px * $factor; }
+        .ellipse-2 { left: 1px * $factor; top: 80px * $factor; }
+        .ellipse-3 { left: 40px * $factor; top: 40px * $factor; }
+        .ellipse-4 { left: 40px * $factor; top: 80px * $factor; }
+        .ellipse-5 { left: 80px * $factor; top: 80px * $factor; }
+        .ellipse-6 { left: 40px * $factor; top: 1px * $factor; }
+        .ellipse-7 { left: 80px * $factor; top: 1px * $factor; }
+        .ellipse-8 { left: 80px * $factor; top: 40px * $factor; }
+        .ellipse-9 { left: 39px * $factor; top: 78px * $factor; }
+        .ellipse-10 { left: 39px * $factor; top: 117px * $factor; }
+        .ellipse-11 { left: 0; top: 117px * $factor; }
+        .ellipse-12 { left: 78px * $factor; top: 195px * $factor; }
+        .ellipse-13 { left: 39px * $factor; top: 157px * $factor; }
+        .ellipse-14 { left: 118px * $factor; top: 195px * $factor; }
+        .ellipse-15 { left: 118px * $factor; top: 234px * $factor; }
+        .ellipse-16 { left: 196px * $factor; top: 157px * $factor; }
+        .ellipse-17 { left: 157px * $factor; top: 195px * $factor; }
+        .ellipse-18 { left: 116px * $factor; top: 39px * $factor; }
+        .ellipse-19 { left: 114px * $factor; top: 0; }
+        .ellipse-20 { left: 157px * $factor; top: 39px * $factor; }
+        .ellipse-21 { left: 78px * $factor; top: 39px * $factor; }
+        .ellipse-22 { left: 196px * $factor; top: 78px * $factor; }
+        .ellipse-23 { left: 196px * $factor; top: 118px * $factor; }
+        .ellipse-24 { left: 235px * $factor; top: 118px * $factor; }
+      
+        .rectangle {
+          border: 1px solid;
+          border-color: #000000;
+          height: 83px * $factor;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 83px * $factor;
+        }
+    }
+}
