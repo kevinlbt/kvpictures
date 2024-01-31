@@ -16,28 +16,33 @@
 
         form {
 
-            input {
+            position: relative;
 
-                margin: 0.7em;
+            input, textarea  {
+
+                margin: 1.2em;
                 outline: none;
-            }
+                background: transparent;
+                border-bottom: 1px solid black;
+                color: rgb(0, 0, 0);
+                position: relative;
 
-            textarea {
+                &::placeholder {
 
-                margin: 0.7em;
-                outline: none;
+                    color: rgb(77, 76, 76);
+                }
             }
 
             button {
                 display: inline-block;
-                border-radius: 4px;
+                border-radius: 20px;
                 background-color: #3d405b;
                 border: none;
                 color: #FFFFFF;
                 text-align: center;
                 font-size: 17px;
                 padding: 16px;
-                width: 130px;
+                width: 200px;
                 transition: all 0.5s;
                 cursor: pointer;
                }
@@ -50,16 +55,18 @@
                }
                
                button span:after {
-                content: '»';
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: "\f178";
                 position: absolute;
                 opacity: 0;
                 top: 0;
-                right: -15px;
+                right: -30px;
                 transition: 0.5s;
                }
                
                button:hover span {
-                padding-right: 15px;
+                padding-right: 30px;
                }
                
                button:hover span:after {

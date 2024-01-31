@@ -56,6 +56,16 @@
                 color: $text-color;
                 font-size: 1.1em;
 
+                @media (max-width: 1024px) {
+
+                    font-size: 1em;
+                }
+
+                @media (max-width: 640px) {
+
+                    font-size: 1.5em;
+                }
+
             }
 
             .selected_projet::before {
@@ -64,16 +74,33 @@
                 font-weight: 900; 
                 content: "\f178";
                 margin: 10px;
+
+                @media (max-width: 640px) {
+
+                    content: "";
+                    margin: 0px;
+                }
             }
             .not_selected {
 
                 transform: translateX(37px);
+
+                @media (max-width: 640px) {
+
+                    transform: translateX(0px);
+                }
 
                 &:hover::before {
                     font-family: "Font Awesome 5 Free"; 
                     font-weight: 900; 
                     content: "\f178";
                     margin: 10px;
+
+                    @media (max-width: 640px) {
+
+                        content: "";
+                        margin: 0px;
+                    }
                 }
 
                 &:hover {
@@ -85,14 +112,15 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 20px;
             grid-auto-rows: minmax(min-content, max-content);
             grid-auto-flow: dense;
         
             @media (max-width: 680px) {
                 
-                grid-template-columns: repeat(1, 1fr)
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px 0px;
             }
         
             @media (min-width: 681px) and (max-width: 1024px) {
@@ -104,18 +132,31 @@
         
                 width: 100%;
                 height: 100%;
-                max-width: 100%;
                 border-radius: 3px;
                 grid-column-end: span 1;
-                object-fit: cover;
                 transition: all 0.3s ease-in-out;
+
+                img {
+
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 3px;
+                    object-fit: cover;
+                    transition: all 0.3s ease-in-out;
+                }
         
                 &:hover {
         
                     cursor: pointer;
-                    transform: scale(1.07);
+                    transform: scale(1.05);
                     border-radius: 10%;
                 }
+
+                &:hover img {
+        
+                    border-radius:20px;
+                }
+                  
             
             }
         
@@ -126,14 +167,27 @@
                 max-width: 100%;
                 border-radius: 3px;
                 grid-column-end: span 2;
-                object-fit: cover;
                 transition: all 0.3s ease-in-out;
+
+                img {
+
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 3px;
+                    object-fit: cover;
+                    transition: all 0.3s ease-in-out;
+                }
         
                 &:hover {
         
                     cursor: pointer;
-                    transform: scale(1.05);
-                    border-radius:10%;
+                    transform: scale(1.04);
+                    
+                }
+
+                &:hover img {
+        
+                    border-radius:20px;
                 }
             }
         }

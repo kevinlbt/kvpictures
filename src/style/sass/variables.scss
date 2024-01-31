@@ -20,6 +20,11 @@ $texte: 'Lora', serif;
           position: absolute;
           top: 77px * $factor;
           width: 83px * $factor;
+
+          &:hover {
+
+            transform: scale(1.1);
+          }
         }
       
         .ellipse,
@@ -52,6 +57,8 @@ $texte: 'Lora', serif;
           height: 2px * $factor;
           position: absolute;
           width: 2px * $factor;
+
+          
         }
       
         .ellipse { left: 1px * $factor; top: 1px * $factor; }

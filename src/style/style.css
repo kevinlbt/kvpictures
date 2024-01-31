@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Hurricane&family=Lora:wght@400;500;700&display=swap");
 nav h1 {
   margin: -3em 0 -5em 0;
@@ -10,12 +9,32 @@ nav h1 .fonth1 {
   margin-left: 0.2em;
   color: #2F2F2F;
 }
+@media (max-width: 1024px) {
+  nav h1 .fonth1 {
+    font-size: 9em;
+  }
+}
+@media (max-width: 640px) {
+  nav h1 .fonth1 {
+    font-size: 7em;
+  }
+}
 nav h1 .fonth1bis {
   font-family: "Lora", serif;
   font-size: 5em;
   font-weight: lighter;
   padding-left: 0.5em;
   color: #2F2F2F;
+}
+@media (max-width: 1024px) {
+  nav h1 .fonth1bis {
+    font-size: 4em;
+  }
+}
+@media (max-width: 640px) {
+  nav h1 .fonth1bis {
+    font-size: 3em;
+  }
 }
 nav .navbar {
   margin-top: 3em;
@@ -133,6 +152,9 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
     position: absolute;
     top: 115.5px;
     width: 124.5px;
+  }
+  .home .home_basic div .group .overlap-group:hover {
+    transform: scale(1.1);
   }
   .home .home_basic div .group .ellipse,
   .home .home_basic div .group .ellipse-1,
@@ -287,6 +309,9 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
     top: 96.25px;
     width: 103.75px;
   }
+  .home .home_basic div .group .overlap-group:hover {
+    transform: scale(1.1);
+  }
   .home .home_basic div .group .ellipse,
   .home .home_basic div .group .ellipse-1,
   .home .home_basic div .group .ellipse-2,
@@ -439,6 +464,9 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
     position: absolute;
     top: 77px;
     width: 83px;
+  }
+  .home .home_basic div .group .overlap-group:hover {
+    transform: scale(1.1);
   }
   .home .home_basic div .group .ellipse,
   .home .home_basic div .group .ellipse-1,
@@ -665,6 +693,9 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
     top: 77px;
     width: 83px;
   }
+  .about .group .overlap-group:hover {
+    transform: scale(1.1);
+  }
   .about .group .ellipse,
   .about .group .ellipse-1,
   .about .group .ellipse-2,
@@ -885,14 +916,35 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
   color: #2F2F2F;
   font-size: 1.1em;
 }
+@media (max-width: 1024px) {
+  .portfolio .portfolio_bloc ul li {
+    font-size: 1em;
+  }
+}
+@media (max-width: 640px) {
+  .portfolio .portfolio_bloc ul li {
+    font-size: 1.5em;
+  }
+}
 .portfolio .portfolio_bloc ul .selected_projet::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f178";
   margin: 10px;
 }
+@media (max-width: 640px) {
+  .portfolio .portfolio_bloc ul .selected_projet::before {
+    content: "";
+    margin: 0px;
+  }
+}
 .portfolio .portfolio_bloc ul .not_selected {
   transform: translateX(37px);
+}
+@media (max-width: 640px) {
+  .portfolio .portfolio_bloc ul .not_selected {
+    transform: translateX(0px);
+  }
 }
 .portfolio .portfolio_bloc ul .not_selected:hover::before {
   font-family: "Font Awesome 5 Free";
@@ -900,12 +952,18 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
   content: "\f178";
   margin: 10px;
 }
+@media (max-width: 640px) {
+  .portfolio .portfolio_bloc ul .not_selected:hover::before {
+    content: "";
+    margin: 0px;
+  }
+}
 .portfolio .portfolio_bloc ul .not_selected:hover {
   transform: translateX(0px);
 }
 .portfolio .portfolio_bloc .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
   grid-auto-rows: minmax(min-content, max-content);
   grid-auto-flow: dense;
@@ -913,6 +971,7 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
 @media (max-width: 680px) {
   .portfolio .portfolio_bloc .grid-container {
     grid-template-columns: repeat(1, 1fr);
+    gap: 20px 0px;
   }
 }
 @media (min-width: 681px) and (max-width: 1024px) {
@@ -923,16 +982,24 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
 .portfolio .portfolio_bloc .grid-container .grid-item {
   width: 100%;
   height: 100%;
-  max-width: 100%;
   border-radius: 3px;
   grid-column-end: span 1;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio .portfolio_bloc .grid-container .grid-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
   object-fit: cover;
   transition: all 0.3s ease-in-out;
 }
 .portfolio .portfolio_bloc .grid-container .grid-item:hover {
   cursor: pointer;
-  transform: scale(1.07);
+  transform: scale(1.05);
   border-radius: 10%;
+}
+.portfolio .portfolio_bloc .grid-container .grid-item:hover img {
+  border-radius: 20px;
 }
 .portfolio .portfolio_bloc .grid-container .large-item {
   width: 100%;
@@ -940,13 +1007,21 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
   max-width: 100%;
   border-radius: 3px;
   grid-column-end: span 2;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio .portfolio_bloc .grid-container .large-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
   object-fit: cover;
   transition: all 0.3s ease-in-out;
 }
 .portfolio .portfolio_bloc .grid-container .large-item:hover {
   cursor: pointer;
-  transform: scale(1.05);
-  border-radius: 10%;
+  transform: scale(1.04);
+}
+.portfolio .portfolio_bloc .grid-container .large-item:hover img {
+  border-radius: 20px;
 }
 .portfolio .portfolio_bloc .overlay-container {
   position: fixed;
@@ -1035,24 +1110,30 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
   font-family: "Hurricane", cursive;
   font-size: 2.5em;
 }
-.contact .contact_form form input {
-  margin: 0.7em;
-  outline: none;
+.contact .contact_form form {
+  position: relative;
 }
-.contact .contact_form form textarea {
-  margin: 0.7em;
+.contact .contact_form form input, .contact .contact_form form textarea {
+  margin: 1.2em;
   outline: none;
+  background: transparent;
+  border-bottom: 1px solid black;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+.contact .contact_form form input::placeholder, .contact .contact_form form textarea::placeholder {
+  color: rgb(77, 76, 76);
 }
 .contact .contact_form form button {
   display: inline-block;
-  border-radius: 4px;
+  border-radius: 20px;
   background-color: #3d405b;
   border: none;
   color: #FFFFFF;
   text-align: center;
   font-size: 17px;
   padding: 16px;
-  width: 130px;
+  width: 200px;
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -1063,15 +1144,17 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
   transition: 0.5s;
 }
 .contact .contact_form form button span:after {
-  content: "»";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f178";
   position: absolute;
   opacity: 0;
   top: 0;
-  right: -15px;
+  right: -30px;
   transition: 0.5s;
 }
 .contact .contact_form form button:hover span {
-  padding-right: 15px;
+  padding-right: 30px;
 }
 .contact .contact_form form button:hover span:after {
   opacity: 1;

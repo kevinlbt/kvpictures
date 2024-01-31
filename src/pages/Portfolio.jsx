@@ -98,19 +98,21 @@ export default function Portfolio () {
     return <React.Fragment>
         <NavBar />
         <div className="portfolio">
-            <div className="portfolio_bloc flex">
-                <div className="m-12 w-1/3">
-                    <h2 className="text-4xl p-5">Projects</h2>
-                    <ul className="p-5">
+            <div className="portfolio_bloc flex flex-col sm:flex-row">
+                <div className="m-5 lg:m-12 w-full sm:w-1/3">
+                    <h2 className="text-5xl sm:text-4xl p-5">Projects</h2>
+                    <ul className="lg:p-5 text-center sm:text-left">
                         {projectTitle ? projectTitle.map(titre => (
                             <li onClick={() => handleChangeSelectedProject(titre.id)} className={`cursor-pointer ${projectPhotoSelected.id === titre.id ? "selected_projet" : "not_selected"}`} key={titre.id}>{titre.titre}</li>
                         )): null}
                     </ul>
                 </div>
-                <div className='w-2/3 mr-12 mt-32 mb-12'>
+                <div className='mx-auto w-4/5 sm:w-2/3 sm:mr-5 lg:mr-12 sm:mt-32 mb-12'>
                     {projectPhotoSelected ? <div className="grid-container">
                         {projectPhotoSelected.attributes.photos.data.map(photo => (
-                            <img onClick={() => setSelectedPhoto(photo)} key={photo.id} src={`https://my-strapi.kevinlebot.com${photo.attributes.formats.medium.url}`} alt={photo.title} className={photo.attributes.height > photo.attributes.width ? "grid-item" : "large-item"} />
+                            <div key={photo.id} className={photo.attributes.height > photo.attributes.width ? "grid-item" : "large-item"}>
+                                <img onClick={() => setSelectedPhoto(photo)} src={`https://my-strapi.kevinlebot.com${photo.attributes.formats.medium.url}`} alt={photo.title}/>
+                            </div>
                         ))} </div>
                         : null }  
                 </div>
