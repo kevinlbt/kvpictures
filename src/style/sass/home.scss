@@ -23,6 +23,11 @@
                     margin: -2em 0 -3em 0;
                 }
 
+                @media (max-width: 1024px) {
+
+                    margin: -0.5em 0 -0.5em 0;
+                }
+
                 .fonth1{
         
                     font-family: $title;
@@ -34,6 +39,16 @@
                     @media (max-width: 1425px) {
 
                         font-size: 9em;
+                    }
+
+                    @media (max-width: 1024px) {
+
+                        font-size: 7em;
+                    }
+
+                    @media (max-width: 640px) {
+
+                        font-size: 4em;
                     }
                 }
         
@@ -49,6 +64,11 @@
 
                         font-size: 4em;
                     }
+
+                    @media (max-width: 640px) {
+
+                        font-size: 10vw;
+                    }
                 }
             }
     
@@ -60,6 +80,11 @@
                 @media (max-width: 1425px) {
 
                     padding: 0.5em 1.5em;
+                }
+
+                @media (max-width: 640px) {
+
+                    padding: 0.1em 0.5em;
                 }
             }
 
@@ -75,7 +100,7 @@
 
             @media (max-width: 1024px) {
 
-                @include draw (1, 25vw, -2vw)
+                @include draw (0.8, 4vw, 16vw)
             }
         }
 
@@ -83,10 +108,6 @@
         div {
 
             .navbis {
-
-                margin-top: 3em;
-                margin-right: 2em;
-                margin-bottom: 4em;
         
                 li {
         
@@ -105,6 +126,18 @@
                     text-align: center;
                     cursor: pointer;
         
+                    @media (min-width: 1024px) and (max-width: 1200px) {
+
+                        padding: 0 0.2em;
+                        margin: 0 0.2em;
+                    }
+
+                    @media (max-width: 640px) {
+
+                        font-size: 1.9em;
+                        margin: 0 0;
+                    }
+
                     &:after,
                     &:before {
                     content: "";
@@ -146,12 +179,21 @@
             .me {
 
                 width: 15vw;
-                margin-top: 2em;
                 border-radius: 5px;
 
                 @media (max-width: 1425px) {
 
                     width: 20vw;
+                }
+
+                @media (max-width: 1024px) {
+
+                    width: 25vw;
+                }
+
+                @media (max-width: 640px) {
+
+                    width: 45vw;
                 }
             }
 
@@ -160,6 +202,20 @@
                 font-family: $texte;
                 font-size: 1.1em;
                 width: 12vw;
+
+                @media (max-width: 1024px) {
+
+                    font-size: 1.2em;
+                    width: 20vw;
+                    padding-left: 1em;
+                }
+
+                @media (max-width: 640px) {
+
+                    font-size: 1.3em;
+                    width: 40vw;
+                    padding-left: 0;
+                }
             }
         }
     }
@@ -172,6 +228,16 @@
         width: 23vw;
         height: auto;
         z-index: 1;
+
+        @media (max-width: 1024px) {
+
+            width: 27vw;
+        }
+
+        @media (max-width: 640px) {
+
+            width: 60vw;
+        }
     }
 
     @media (min-width: 1025px) {
@@ -185,6 +251,16 @@
         font-size: 7em;
         font-weight: 700;
         text-transform: uppercase;
+
+        @media (max-width: 1024px) {
+
+            font-size: 5em;
+        }
+
+        @media (max-width: 640px) {
+
+            font-size: 2.5em;
+        }
 
         .fonth2{
         

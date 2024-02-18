@@ -1,6 +1,8 @@
 
 .portfolio {
 
+    min-height: 100vh;
+    
     h1 {
 
         margin: -3em 0 -5em 0;
@@ -63,7 +65,7 @@
 
                 @media (max-width: 640px) {
 
-                    font-size: 1.5em;
+                    font-size: 1.2em;
                 }
 
             }
@@ -220,6 +222,10 @@
                         height: 100%;
                         object-fit: contain;      
 
+                        @media (max-width: 640px) {
+
+                            width: 90%;
+                        }
                     }
 
                 }
@@ -229,6 +235,12 @@
                     position: absolute;
                     top: -2vw;
                     left: -5vw;
+
+                    @media (max-width: 640px) {
+
+                        top: -10vw;
+                        left: -5vw;
+                    }
                 }
 
                 .index_pages {
@@ -236,6 +248,17 @@
                     position: absolute;
                     top: 7vh;
                     left: -4.2vw;
+
+                    @media (max-width: 640px) {
+
+                        top: 1.5vh;
+                        left: 1vw;
+                    }
+
+                    @media (max-width: 550px) {
+
+                        top: 5vh;
+                    }
                 }
 
             }

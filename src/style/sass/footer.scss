@@ -1,0 +1,58 @@
+footer {
+
+
+    .fonth1{
+
+        font-family: $title;
+        font-size: 4.5em;
+        font-weight: lighter;
+        color: $text-color;
+    
+        @media (max-width: 1024px) {
+    
+            font-size: 3em;
+        }
+    
+        @media (max-width: 640px) {
+    
+            font-size: 2em;
+        }
+    }
+    
+    .fonth1bis {
+    
+        font-family: $texte;
+        font-size: 2.5em;
+        font-weight: lighter;
+        padding-left: 0.5em;
+        color: $text-color;
+        
+        @media (max-width: 1024px) {
+    
+            font-size: 2em;
+        }
+    
+        @media (max-width: 640px) {
+    
+            font-size: 1.5em;
+        }
+    }
+
+    ul {
+
+        li {
+
+            font-family: $texte;
+            font-size: 1em;
+            color: $text-color;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out ;
+
+            &:hover {
+
+                transform: scale(1.1);
+            }
+        }
+    }
+}

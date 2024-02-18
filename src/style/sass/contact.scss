@@ -5,6 +5,11 @@
         font-family: $texte;
         font-size: 3em;
 
+        @media (max-width: 640px) {
+
+            font-size: 2em;
+        }
+
         .contact_title {
 
             font-family: $title;

@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import NavBar from '../components/navbar';
+import Footer from "../components/Footer";
 
 const token = "e98e1b6a60e1cce2296a55b9bbb7a62e16436ddea249e42b733df5df240520867e8a9fa4ee90332b8cc7d1d38b40ef8492a07a60c93e912e2ce184470272893f5e6b65fa3fb6a2c0668e4daedd88dd5fda997e557622a86f784a70fe60d071c9e1d55afd4e6c63b3701142bb694a7bc25d03f6aadcadb1a8edc87019c1c9d5e0"
 
@@ -99,7 +100,7 @@ export default function Portfolio () {
         <NavBar />
         <div className="portfolio">
             <div className="portfolio_bloc flex flex-col sm:flex-row">
-                <div className="m-5 lg:m-12 w-full sm:w-1/3">
+                <div className="m-5 lg:m-12 sm:w-1/3">
                     <h2 className="text-5xl sm:text-4xl p-5">Projects</h2>
                     <ul className="lg:p-5 text-center sm:text-left">
                         {projectTitle ? projectTitle.map(titre => (
@@ -107,7 +108,7 @@ export default function Portfolio () {
                         )): null}
                     </ul>
                 </div>
-                <div className='mx-auto w-4/5 sm:w-2/3 sm:mr-5 lg:mr-12 sm:mt-32 mb-12'>
+                <div className='mx-auto w-4/5 sm:w-3/5 lg:w-2/3 sm:mr-5 lg:mr-12 sm:mt-24 lg:mt-32 mb-12'>
                     {projectPhotoSelected ? <div className="grid-container">
                         {projectPhotoSelected.attributes.photos.data.map(photo => (
                             <div key={photo.id} className={photo.attributes.height > photo.attributes.width ? "grid-item" : "large-item"}>
@@ -120,7 +121,7 @@ export default function Portfolio () {
                 {selectedPhoto && (
                     
                     <div className="overlay-container flex justify-center items-center">
-                            <div ref={wrapperRef} className={`overlay_item flex justify-center items-center`}>
+                            <div ref={wrapperRef} className={`overlay_item flex flex-col sm:flex-row justify-center items-center`}>
                                 <p className='index_pages text-2xl text-white'> {projectPhotoSelected.attributes.photos.data.indexOf(selectedPhoto)+1} / {projectPhotoSelected.attributes.photos.data.length} </p>
                                 <i onClick={() => setSelectedPhoto(null)} className="cross_close_image fa-regular fa-circle-xmark text-4xl text-slate-300 cursor-pointer hover:text-slate-500 p-8"></i>
                                 <i onClick={() => PrevPhoto(selectedPhoto.id-1)} className="fa-regular fa-circle-left text-5xl text-slate-300 cursor-pointer hover:text-slate-500 p-8"></i>
@@ -144,5 +145,6 @@ export default function Portfolio () {
                 )}
             </div>
         </div>
+        <Footer />
     </React.Fragment>
 }

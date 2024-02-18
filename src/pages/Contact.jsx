@@ -1,5 +1,6 @@
 import { useState } from "react";
 import NavBar from "../components/navbar";
+import Footer from "../components/Footer";
 import axios from 'axios';
 import DOMPurify from 'dompurify';
 import Cookies from 'js-cookie';
@@ -96,7 +97,7 @@ export default function Contact () {
     return <section className="contact" id="contact">
                 <NavBar />
 
-                <h3 className="ml-12"><strong className="contact_title pr-2">C</strong>ontacter - moi</h3>
+                <h3 className="ml-5 sm:ml-12"><strong className="contact_title pr-2">C</strong>ontacter - moi</h3>
 
                 <div className="contact_form">  
                     <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center formulaire w-2/3 lg:w-2/5 lg:pt-8 mx-auto m-12" >
@@ -105,7 +106,7 @@ export default function Contact () {
                         <input onChange={HandleEmailChange} type="email" name="email" placeholder=" Email" className="w-full py-1.5" />
                         <input onChange={HandleSubjectChange} type="text" name="subject" placeholder=" Sujet" className="w-full py-1.5" />
                         <textarea onChange={HandleMessageChange} name="message" rows="7" placeholder=" Votre message" className="w-full py-1.5"></textarea>
-                        {IfMailSend ? <p className={`text-3xl text-center h-9 ${ifError ? "text-red-500" : "text-green-500"}`}>{mailResponse}</p> : <p className="h-9"></p>}
+                        {IfMailSend ? <p className={`text-3xl text-center h-24 sm:h-9 ${ifError ? "text-red-500" : "text-green-500"}`}>{mailResponse}</p> : <p className="h-9"></p>}
                         <button className="m-8" type="submit">
                             <span>Envoyer</span>
                         </button>
@@ -113,5 +114,6 @@ export default function Contact () {
                     </form>
                 </div>  
 
+                <Footer />
             </section>
 }

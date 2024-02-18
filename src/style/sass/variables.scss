@@ -9,6 +9,12 @@ $texte: 'Lora', serif;
 @mixin draw ($facteur, $x, $y) {
 
     .group {
+
+        @media (max-width: 1024px) {
+
+            display: none;
+        }
+
         position: relative;
         transform: translateX($x) translateY($y);
       
@@ -20,6 +26,7 @@ $texte: 'Lora', serif;
           position: absolute;
           top: 77px * $factor;
           width: 83px * $factor;
+          transition: transform 0.2s ease;
 
           &:hover {
 
@@ -57,7 +64,12 @@ $texte: 'Lora', serif;
           height: 2px * $factor;
           position: absolute;
           width: 2px * $factor;
+          transition: transform 0.2s ease;
 
+          &:hover {
+
+            transform: scale(1.7);
+          }
           
         }
       
