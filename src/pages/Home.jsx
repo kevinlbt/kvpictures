@@ -1,7 +1,8 @@
 import React from "react";
 import Draw from "../components/draw";
-import moi from "../assets/images/moi.jpg"
-import moi2 from "../assets/images/me2.jpg"
+import moi from "../assets/images/moi.webp"
+import moi2 from "../assets/images/me2.webp"
+import Footer from "../components/Footer"
 
 function Home() {
 
@@ -16,9 +17,8 @@ function Home() {
                 </div>
                 <div className="flex flex-col items-center justify-evenly lg:mr-24">
                     <ul className='navbis flex justify-center items-center mb-12 mt-8'>
-                        <li><a href="/">accueil</a></li>
-                        <li><a href="/portfolio">portfolio</a></li>
-                        <li><a href="/contact">contact</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                     <div className="flex flex-col sm:flex-row lg:flex-col justify-between items-center">
                         <img className="me" src={moi} alt="moi" />
@@ -43,8 +43,8 @@ function Home() {
                 <Draw/>
                 <div className="h-2/3 flex justify-around items-center">
                     <div className="w-5/6 lg:w-3/6 description_about mt-5 sm:ml-5">
-                        <p><strong className='fontp'>P</strong>assionate about photography, I use my free time to explore the world around me with my camera. I tried my hand at different types 
-                        of photography such as landscape photography, street photography, portrait photography or wildlife photography.</p>
+                        <p><strong className='fontp'>I</strong> discovered photography during my trip to Australia where I bought my first camera and my first lenses. 
+                        It was immediately easy for me to take photos and above all it was obvious and a pleasure to do so.</p>
                     </div>
                     <div className="arrow-about-bis self-start mt-5">
                         <p>about</p>
@@ -52,6 +52,7 @@ function Home() {
                 </div>
             </div>
         </article>
+        <Footer />
     </React.Fragment>
   );
 }

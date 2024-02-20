@@ -5,7 +5,7 @@ import axios from 'axios';
 import DOMPurify from 'dompurify';
 import Cookies from 'js-cookie';
 
-const AUTH_TOKEN = "ZXOoRm5oxtAcGNbGMyHI7NJpIeZzaqdFNteUa0KM";
+const AUTH_TOKEN = import.meta.env.VITE_AUTH_TOKEN;
 
 function isValidEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

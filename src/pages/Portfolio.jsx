@@ -4,7 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import NavBar from '../components/navbar';
 import Footer from "../components/Footer";
 
-const token = "e98e1b6a60e1cce2296a55b9bbb7a62e16436ddea249e42b733df5df240520867e8a9fa4ee90332b8cc7d1d38b40ef8492a07a60c93e912e2ce184470272893f5e6b65fa3fb6a2c0668e4daedd88dd5fda997e557622a86f784a70fe60d071c9e1d55afd4e6c63b3701142bb694a7bc25d03f6aadcadb1a8edc87019c1c9d5e0"
+const token = import.meta.env.VITE_BACK_TOKEN
 
 export default function Portfolio () {
 
@@ -55,39 +55,41 @@ export default function Portfolio () {
         })();
     }, [ setAllPhoto ])
 
-    function PrevPhoto (photoId) {
+    function PrevPhoto () {
  
-        const photoSelected = projectPhotoSelected.attributes.photos.data;
-
-        setTransitionName("fadeout")
-        let prevId = 0;
-
-        if (photoSelected.find(item => item.id === photoId)) {
-            prevId = photoId;
-        }
-        else {
-            prevId = photoSelected[photoSelected.length-1].id
-        }
-
-        
-        setSelectedPhoto(photoSelected.filter(item => item.id === prevId)[0]);  
-    }
-
-    function NextPhoto (photoId) {
-
-        const selectedPhoto = projectPhotoSelected.attributes.photos.data;
+        const allPhotoFromSelectedProject = projectPhotoSelected.attributes.photos.data;
 
         setTransitionName("fade")
-        let NextId = 0;
+        let prevId = 0;
 
-        if (selectedPhoto.find(item => item.id === photoId)) {
-            NextId = photoId;
+        if (allPhotoFromSelectedProject.indexOf(selectedPhoto) !== 0) {
+
+            prevId = allPhotoFromSelectedProject.indexOf(selectedPhoto) -1;
         }
         else {
-            NextId = selectedPhoto[0].id
+            prevId = allPhotoFromSelectedProject.length-1
+        }
+  
+        setSelectedPhoto(allPhotoFromSelectedProject[prevId]);
+
+    }
+
+    function NextPhoto () {
+
+        const allPhotoFromSelectedProject = projectPhotoSelected.attributes.photos.data;
+
+        setTransitionName("fadeout")
+        let NextId = 0;
+
+        if (allPhotoFromSelectedProject.indexOf(selectedPhoto) !== allPhotoFromSelectedProject.length - 1) {
+
+            NextId = allPhotoFromSelectedProject.indexOf(selectedPhoto) + 1;
+        }
+        else {
+            NextId = 0;
         }
         
-        setSelectedPhoto(selectedPhoto.filter(item => item.id === NextId)[0]);
+        setSelectedPhoto(allPhotoFromSelectedProject[NextId]);
     }
 
     function handleChangeSelectedProject (id) {
@@ -95,6 +97,7 @@ export default function Portfolio () {
         const newProjet = allPhoto.find(item => item.id === id)
         setProjectPhotoSelected(newProjet);
     }
+
 
     return <React.Fragment>
         <NavBar />
@@ -124,7 +127,7 @@ export default function Portfolio () {
                             <div ref={wrapperRef} className={`overlay_item flex flex-col sm:flex-row justify-center items-center`}>
                                 <p className='index_pages text-2xl text-white'> {projectPhotoSelected.attributes.photos.data.indexOf(selectedPhoto)+1} / {projectPhotoSelected.attributes.photos.data.length} </p>
                                 <i onClick={() => setSelectedPhoto(null)} className="cross_close_image fa-regular fa-circle-xmark text-4xl text-slate-300 cursor-pointer hover:text-slate-500 p-8"></i>
-                                <i onClick={() => PrevPhoto(selectedPhoto.id-1)} className="fa-regular fa-circle-left text-5xl text-slate-300 cursor-pointer hover:text-slate-500 p-8"></i>
+                                <i onClick={() => PrevPhoto()} className="fa-regular fa-circle-left text-5xl text-slate-300 cursor-pointer hover:text-slate-500 p-8"></i>
                                 <TransitionGroup
                                     childFactory={childFactoryCreator(transitionName === "fade" ? "fade" : "fadeout")}
                                 >
@@ -139,11 +142,15 @@ export default function Portfolio () {
                                         <img src={`https://my-strapi.kevinlebot.com${selectedPhoto.attributes.url}`} alt={selectedPhoto.title} />                   
                                     </CSSTransition>
                                 </TransitionGroup>
-                                <i onClick={() => NextPhoto(selectedPhoto.id+1)} className="fa-regular fa-circle-right text-5xl text-slate-300 cursor-pointer hover:text-slate-500 p-8"></i>
+                                <i onClick={() => NextPhoto()} className="fa-regular fa-circle-right text-5xl text-slate-300 cursor-pointer hover:text-slate-500 p-8"></i>
                             </div>
                     </div>
                 )}
             </div>
+        </div>
+        <div className='flex items-center mx-12 mb-12'>
+            <i onClick={() => window.scrollTo(top)} className="fa-solid fa-up-long text-5xl cursor-pointer hover:-translate-y-2 duration-200"></i>
+            <p className='pl-7'>back to top</p>
         </div>
         <Footer />
     </React.Fragment>
