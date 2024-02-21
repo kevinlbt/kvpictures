@@ -218,7 +218,7 @@
                     padding-left: 0;
                 }
 
-                @media (max-height: 700px) {
+                @media (max-height: 700px) and (max-width: 640px) {
 
                     width: 80vw;
                 }

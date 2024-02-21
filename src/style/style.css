@@ -1012,7 +1012,7 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
     padding-left: 0;
   }
 }
-@media (max-height: 700px) {
+@media (max-height: 700px) and (max-width: 640px) {
   .home .home_basic div blockquote {
     width: 80vw;
   }
