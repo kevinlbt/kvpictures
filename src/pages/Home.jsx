@@ -16,7 +16,7 @@ function Home() {
                     <Draw/>
                 </div>
                 <div className="flex flex-col items-center justify-evenly lg:mr-24">
-                    <ul className='navbis flex justify-center items-center mb-12 mt-8'>
+                    <ul className='navbis flex justify-center items-center mb-7 mt-8'>
                         <li><a href="/portfolio">Portfolio</a></li>
                         <li><a href="/contact">Contact</a></li>
                     </ul>

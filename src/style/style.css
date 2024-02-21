@@ -1007,9 +1007,14 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
 }
 @media (max-width: 640px) {
   .home .home_basic div blockquote {
-    font-size: 1.3em;
+    font-size: 1.2em;
     width: 40vw;
     padding-left: 0;
+  }
+}
+@media (max-height: 700px) {
+  .home .home_basic div blockquote {
+    width: 80vw;
   }
 }
 

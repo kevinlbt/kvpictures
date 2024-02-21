@@ -48,7 +48,7 @@ export default function Portfolio () {
                 },
             });
             setAllPhoto(data.data);
-            setProjectPhotoSelected(data.data[0])
+            setProjectPhotoSelected(data.data[1])
             setProjectTitle([])
             const titles = data.data.map(item => ({titre:item.attributes.titre,id: item.id}));
             setProjectTitle(titles);
