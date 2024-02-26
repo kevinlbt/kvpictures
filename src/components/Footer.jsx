@@ -6,6 +6,7 @@ export default function Footer () {
             <li className="p-3"><a href="/">Home</a></li>
             <li className="p-3"><a href="/portfolio">Portfolio</a></li>
             <li className="p-3"><a href="/contact">Contact</a></li>
+            <li className="p-3"><a href="https://www.instagram.com/kv_picture_/" target="_blank" rel="noopener noreferrer"><i className="insta fa-brands fa-instagram"></i></a></li>
         </ul>
     </footer>
 }

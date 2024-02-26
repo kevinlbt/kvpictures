@@ -26,6 +26,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <a href="https://www.instagram.com/kv_picture_/" target="_blank" rel="noopener noreferrer"><i className="insta fa-brands fa-instagram"></i></a>
         </section>
         <article className="about w-4/5 lg:w-2/3 m-auto">
             <h2>a<stong className='fonth2'>B</stong>out</h2>

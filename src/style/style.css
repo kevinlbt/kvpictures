@@ -104,6 +104,7 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
   background-size: cover;
   height: 100vh;
   width: 99vw;
+  position: relative;
 }
 .home .home_basic {
   background-color: #D9D9D9;
@@ -1016,6 +1017,17 @@ nav .navbar li:hover::before, nav .navbar li:hover::after {
   .home .home_basic div blockquote {
     width: 80vw;
   }
+}
+.home .insta {
+  position: absolute;
+  bottom: 130px;
+  left: 10vw;
+  font-size: 40px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.home .insta:hover {
+  color: #555555;
 }
 
 .about img {
